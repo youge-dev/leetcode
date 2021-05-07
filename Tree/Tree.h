@@ -29,6 +29,37 @@ public:
     vector<vector<int>> levelOrder(TreeNode *root);
 
     vector<int> levelOrderOne(TreeNode *root);
+
+    /**
+     * 二叉树的前序遍历(迭代)
+     */
+
+    vector<int> preorderTraversal(TreeNode *root);
+
+    /**
+    * 二叉树的前序遍历(递归)
+    */
+    vector<int> preorderTraversalRecursive(TreeNode *root);
+
+    /**
+    * 二叉树的中序遍历（迭代）
+    */
+    vector<int> inorderTraversal(TreeNode *root);
+
+    /**
+    * 二叉树的中序遍历(递归)
+    */
+    vector<int> inorderTraversalRecursive(TreeNode *root);
+
+    /**
+    * 二叉树的后序遍历(迭代)
+    */
+    vector<int> postorderTraversal(TreeNode *root);
+
+    /**
+    * 二叉树的后序遍历(递归)
+    */
+    vector<int> postorderTraversalRecursive(TreeNode *root);
 };
 
 
