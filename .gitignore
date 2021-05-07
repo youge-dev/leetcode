@@ -1,0 +1,17 @@
+CMakeLists.txt
+cmake-build-debug
+.idea
+docs/api.html
+docs/node_modules
+.gradle/
+**/.project
+**/.classpath
+**/.settings
+**/build/
+**/bin/
+**/out/
+jserver
+*.iml
+target/
+gradle
+gradlew*
