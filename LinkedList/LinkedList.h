@@ -39,6 +39,26 @@ public:
      * @return
      */
     ListNode *reverseKGroup(ListNode *head, int k);
+
+    /**
+     * 判断链表有环(快慢指针)
+     * @param head
+     * @return
+     */
+    bool hasCycle(ListNode *head) {
+        if (head == nullptr || head->next == nullptr) {
+            return false;
+        }
+        ListNode *slow = head, *fast = head->next;
+        while (fast != nullptr && fast->next != nullptr) {
+            slow = slow->next;
+            fast = fast->next->next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
 };
 
 
