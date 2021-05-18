@@ -4,8 +4,29 @@
 
 #include "List.h"
 #include "algorithm"
+#include "unordered_map"
 
 using namespace std;
+
+vector<int> List::twoSum(vector<int> &input, int target) {
+    unordered_map<int, int> map;
+    for (int i = 0; i < input.size(); i++) {
+        if (map.count(target - input[i])) {
+            return {map.at(target - input[i]), i};
+        }
+        map.insert(pair<int, int>(input[i], i));
+    }
+    return {0};
+}
+
+int List::maxSubArray(vector<int> &nums) {
+    int res = nums.at(0);
+    for (int i = 1; i < nums.size(); i++) {
+        nums[i] = nums[i] + max(nums[i - 1], 0);
+        res = max(res, nums[i]);
+    }
+    return res;
+}
 
 void List::nextPermutation(vector<int> &nums) {
     int k = 0;

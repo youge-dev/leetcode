@@ -5,6 +5,7 @@
 #ifndef DAILY_LIST_H
 #define DAILY_LIST_H
 
+#include <iostream>
 #include "vector"
 
 using namespace std;
@@ -16,6 +17,22 @@ public:
      * @param nums
      */
     void nextPermutation(vector<int> &nums);
+
+
+    /**
+     * 两数之和
+     */
+    vector<int> twoSum(vector<int> &input, int target);
+
+    /**
+     * 连续子数组的最大和
+     */
+    int maxSubArray(vector<int> &nums);
+
+    /**
+     * 三数之和
+     */
+    vector<vector<int>> threeSum(vector<int> &nums);
 
 private:
     void swap(vector<int> &input, int i, int j) {
